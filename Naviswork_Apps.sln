@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviswork_Apps", "Naviswork_Apps\Naviswork_Apps.csproj", "{BD174A01-6312-403F-8485-01E445BB58C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD174A01-6312-403F-8485-01E445BB58C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD174A01-6312-403F-8485-01E445BB58C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD174A01-6312-403F-8485-01E445BB58C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD174A01-6312-403F-8485-01E445BB58C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B3956FB-7866-43BD-8169-DF7A050F929E}
+	EndGlobalSection
+EndGlobal
