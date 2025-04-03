@@ -4,10 +4,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:Naviswork_Apps"
-        mc:Ignorable="d" Width="350" Height="180"
-        MinWidth="350" MinHeight="180">
+        mc:Ignorable="d" Width="350" Height="200"
+        MinWidth="350" MinHeight="200">
     <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <!-- Para el Label -->
             <RowDefinition Height="*"/>
@@ -29,8 +30,20 @@
                  IsEnabled="True"
                  Margin="0,10,0,15"/>
 
-        <!-- Contenedor para los botones -->
         <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblIndex" Content="Index : 0" Grid.Column="0" Margin="0,0,0,0"/>
+            <Label Name="lblMessage" 
+                   HorizontalAlignment="Right" 
+                   Content="Seleccionados: 0" 
+                   Grid.Column="1" Margin="0,0,0,0"/>
+        </Grid>
+
+        <!-- Contenedor para los botones -->
+        <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <!-- Para Preview -->
@@ -44,14 +57,14 @@
                 <!-- Para Search -->
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btn_preview" Content="Preview" Padding="10,5"
+            <Button x:Name="btn_preview" Content="Preview" Width="70" Padding="10,5"
                     Click="btn_preview_Click" Grid.Column="0" Margin="0,0,5,0"/>
 
-            <Button x:Name="btn_Next" Content="Next" Padding="10,5"
-                    Click="btn_Next_Click" Grid.Column="1" Margin="0,0,15,0"/>
+            <Button x:Name="btn_Next" Content="Next" Width="70" Padding="10,5"
+                    Click="btn_Next_Click" Grid.Column="1" Margin="0,0,25,0"/>
 
-            <Button x:Name="btn_ActiveSection" Content="Section" Padding="10,5"
-                    Click="btn_ActiveSection_Click" Visibility="Visible" Grid.Column="2"/>
+            <Button x:Name="btn_ActiveSection" Content="Section" Width="70" Padding="10,5"
+                    Click="btn_ActiveSection_Click" Grid.Column="2"/>
 
             <Button Content="Search" Padding="10,5"
                     Click="Button_Click" Grid.Column="4"/>

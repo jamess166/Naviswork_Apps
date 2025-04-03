@@ -42,14 +42,14 @@ namespace Naviswork_Apps
 
         }
 
-        public static void HighlightElements(List<string> idsList, int index = 0)
+        public static int HighlightElements(List<string> idsList, int index = 0)
         {
             // Obtener el documento activo
             Autodesk.Navisworks.Api.Document doc = Autodesk.Navisworks.Api.Application.ActiveDocument;
             if (doc == null)
             {
-                System.Windows.MessageBox.Show("No hay un documento abierto en Navisworks.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                //System.Windows.MessageBox.Show("No hay un documento abierto en Navisworks.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
             }
 
             // Crear la búsqueda
@@ -70,13 +70,15 @@ namespace Naviswork_Apps
             ModelItemCollection foundItems = search.FindAll(doc, true);
             if (foundItems == null || foundItems.Count == 0)
             {
-                System.Windows.MessageBox.Show("No se encontraron elementos con los IDs especificados.", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
-                return;
+                //System.Windows.MessageBox.Show("No se encontraron elementos con los IDs especificados.", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
+                return 0;
             }
 
             // Destacar elementos
             doc.CurrentSelection.Clear();
             doc.CurrentSelection.CopyFrom(foundItems);
+
+            return 1;
         }
 
         public static void ActivateSection()
@@ -102,27 +104,7 @@ namespace Naviswork_Apps
             BoundingBox3D bounds = selectedItem.BoundingBox();
 
             // Crear la sección en el plano XY
-            CreateXYSectionPlane(bounds);
-
-            //// Obtener el estado actual de Navisworks
-            //ComApi.InwOpState10 state = ComApiBridge.State;
-
-            //// Crear un plano de corte (clip plane)
-            //ComApi.InwOaClipPlane clipPlane = (ComApi.InwOaClipPlane)state
-            //    .ObjectFactory(ComApi.nwEObjectType.eObjectType_nwOaClipPlane);
-
-            //// Configurar el plano para que sea paralelo al plano XY (vista desde arriba)
-            //// Creamos un vector unitario en dirección Z
-            //ComApi.InwLUnitVec3f normal = (ComApi.InwLUnitVec3f)state.ObjectFactory(ComApi.nwEObjectType.eObjectType_nwLUnitVec3f);
-            //normal.SetValue(0, 0, 1); // Dirección Z+
-
-            //// Creamos un punto para la posición del plano
-            //ComApi.InwLPos3f position = (ComApi.InwLPos3f)state.ObjectFactory(ComApi.nwEObjectType.eObjectType_nwLPos3f);
-            //position.SetValue(bounds.Center.X, bounds.Center.Y, bounds.Center.Z);
-
-
-
-
+            CreateXYSectionPlane(bounds);         
         }
 
         private static void CreateXYSectionPlane(BoundingBox3D bounds)
@@ -166,7 +148,6 @@ namespace Naviswork_Apps
             // Calcular la distancia del plano
             // Usamos el centro Z del objeto seleccionado
             double distance = -bounds.Max.Z;
-
             // Configurar el plano geométrico con el vector normal y la distancia
             sectionPlane.SetValue(sectionPlaneNormal, distance);
 
@@ -176,6 +157,8 @@ namespace Naviswork_Apps
             // Habilitar este plano de sección
             clipPlane.Enabled = true;
 
+            state.ZoomInCurViewOnCurSel();
+                        
             // Opcional: Ajustar la vista para centrarse en el elemento seleccionado
             //AdjustViewToSelection(state, bounds);
         }

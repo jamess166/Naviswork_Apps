@@ -111,13 +111,24 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps"
+    <PostBuildEvent>REM Crear la carpeta principal si no existe
+if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps"
+
+REM Crear la subcarpeta de idioma si no existe
 if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US"
+
+REM Crear la carpeta de Resources si no existe
 if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources"
 
-xcopy "$(TargetDir)Naviswork_Apps.dll" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\" /Y
-xcopy /Y "$(ProjectDir)Naviswork_Apps.xaml" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US"
+REM Copiar los archivos individuales
+xcopy /Y "$(TargetDir)Naviswork_Apps.dll" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\"
+xcopy /Y "$(ProjectDir)Naviswork_Apps.xaml" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US\"
 
-xcopy /E /I /Y "$(ProjectDir)Resources\*" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources\"</PostBuildEvent>
+REM Copiar toda la carpeta Resources con su contenido
+xcopy /E /I /Y "$(ProjectDir)Resources" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources"
+
+REM Mostrar mensaje de éxito
+echo Post-Build Event ejecutado correctamente.
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
