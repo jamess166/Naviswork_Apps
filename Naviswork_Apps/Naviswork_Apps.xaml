@@ -15,7 +15,14 @@
                     Orientation="Vertical"
                     ShowText="True"
                     Size="Large"/>
-			</RibbonPanelSource>
+				<nvw:NWRibbonButton
+                    x:Uid="UID_ButtonClashes"
+                    Id="ID_ButtonClashes"
+                    KeyTip="C2"
+                    Orientation="Vertical"
+                    ShowText="True"
+                    Size="Large"/>
+			</RibbonPanelSource>			
 		</RibbonPanel>
 	</RibbonTab>
 

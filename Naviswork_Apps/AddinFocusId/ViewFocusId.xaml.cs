@@ -20,11 +20,11 @@ namespace Naviswork_Apps
     /// <summary>
     /// Lógica de interacción para ViewMain.xaml
     /// </summary>
-    public partial class ViewMain : Window
+    public partial class ViewFocusId : Window
     {
         public int index { get; set; }
 
-        public ViewMain()
+        public ViewFocusId()
         {
             InitializeComponent();
         }

@@ -41,6 +41,9 @@
     <Reference Include="Autodesk.Navisworks.Automation">
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Automation.dll</HintPath>
     </Reference>
+    <Reference Include="Autodesk.Navisworks.Clash">
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Clash.dll</HintPath>
+    </Reference>
     <Reference Include="Autodesk.Navisworks.ComApi">
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.ComApi.dll</HintPath>
     </Reference>
@@ -79,26 +82,36 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddinChashes\ClashData.cs" />
+    <Compile Include="AddinChashes\Clashes.cs" />
+    <Compile Include="AddinChashes\ViewClashes.xaml.cs">
+      <DependentUpon>ViewClashes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.cs" />
     <Compile Include="ElevationTracker.cs" />
-    <Compile Include="FocusIds.cs" />
+    <Compile Include="AddinFocusId\FocusIds.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewMain.xaml.cs">
-      <DependentUpon>ViewMain.xaml</DependentUpon>
+    <Compile Include="AddinFocusId\ViewFocusId.xaml.cs">
+      <DependentUpon>ViewFocusId.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils\NavisworkUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AddinChashes\ViewClashes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Naviswork_Apps.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <None Include="Resources\cesel32x32.png" />
     <None Include="Resources\cesel16x16.png" />
-    <Page Include="ViewMain.xaml">
+    <Page Include="AddinFocusId\ViewFocusId.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
