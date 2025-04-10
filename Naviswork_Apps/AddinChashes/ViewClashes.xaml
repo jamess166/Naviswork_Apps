@@ -3,15 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        xmlns:local="clr-namespace:Naviswork_Apps"
-        mc:Ignorable="d" Width="350" Height="200"
+        xmlns:local="clr-namespace:Naviswork_Apps" 
+        xmlns:localModel="clr-namespace:Naviswork_Apps.AddinChashes" 
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d" Width="650" Height="400"
         MinWidth="350" MinHeight="200">
+
+    <Window.DataContext>
+        <localModel:ClashViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <syncfusion:SfDataGrid 
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding ClashList}" 
+            SelectedItem="{Binding SelectedClash, Mode=TwoWay}"
+            SelectionMode="Single"
+            AllowFiltering="True"
+            AllowSorting="True"
+            ShowGroupDropArea="True"           
+            Margin="10">
+
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn HeaderText="Test Name" MappingName="TestName"/>
+                <syncfusion:GridTextColumn HeaderText="Clash Name" MappingName="ClashName"/>
+                <syncfusion:GridTextColumn HeaderText="Status" MappingName="Status" />
+                <syncfusion:GridTextColumn HeaderText="Assigned To" MappingName="AssignedTo"/>
+                <syncfusion:GridTextColumn HeaderText="Clash Count" 
+                                            MappingName="ClashResults.Count"                                            
+                                            TextAlignment="Center"/>
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </Grid>  
     
-    <Grid Margin="10">
-        
-
-
-        
-    </Grid>
 </Window>
 

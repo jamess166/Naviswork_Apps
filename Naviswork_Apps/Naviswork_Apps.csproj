@@ -68,6 +68,10 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Syncfusion.Data.WPF, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Licensing, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.WPF, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -84,6 +88,8 @@
   <ItemGroup>
     <Compile Include="AddinChashes\ClashData.cs" />
     <Compile Include="AddinChashes\Clashes.cs" />
+    <Compile Include="AddinChashes\ClashUtils.cs" />
+    <Compile Include="AddinChashes\ClashViewModel.cs" />
     <Compile Include="AddinChashes\ViewClashes.xaml.cs">
       <DependentUpon>ViewClashes.xaml</DependentUpon>
     </Compile>

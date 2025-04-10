@@ -17,11 +17,13 @@ using Autodesk.Windows;
 using Autodesk.Navisworks.Api.ComApi;
 using ComApi = Autodesk.Navisworks.Api.Interop.ComApi;
 using Autodesk.Navisworks.Api.Interop.ComApi;
+using Application = Autodesk.Navisworks.Api.Application;
+using Autodesk.Navisworks.Api.Interop;
 namespace Naviswork_Apps.Utils
 {
     public class NavisworkUtils
     {
-        public static void CreateXYSectionPlane(BoundingBox3D bounds)
+        public static void CreateXYSectionPlane(BoundingBox3D bounds, bool zoomIt = true)
         {
             // Obtener el estado de Navisworks
             ComApi.InwOpState10 state = ComApiBridge.State;
@@ -40,7 +42,7 @@ namespace Naviswork_Apps.Utils
                 nwEObjectType.eObjectType_nwLPlane3f,
                 null,
                 null);
-
+            
             // Obtener la colección de planos de recorte
             ComApi.InwClippingPlaneColl2 clipColl =
                 (ComApi.InwClippingPlaneColl2)state.CurrentView.ClippingPlanes();
@@ -48,13 +50,7 @@ namespace Naviswork_Apps.Utils
             // Deshabilitar todos los planos de corte existentes
             DisableAllClippingPlanes(clipColl);
 
-            // Crear un nuevo plano de sección
-            //clipColl.CreatePlane(clipColl.Count + 1);
             clipColl.CreatePlane(1);
-
-            // Obtener el último plano de sección que acabamos de crear
-            //ComApi.InwOaClipPlane clipPlane =
-            //(ComApi.InwOaClipPlane)state.CurrentView.ClippingPlanes().Last();
 
             ComApi.InwOaClipPlane clipPlane =
 (ComApi.InwOaClipPlane)state.CurrentView.ClippingPlanes()[1];
@@ -64,15 +60,28 @@ namespace Naviswork_Apps.Utils
             double distance = -bounds.Max.Z;
             // Configurar el plano geométrico con el vector normal y la distancia
             sectionPlane.SetValue(sectionPlaneNormal, distance);
-
+            
             // Asignar el plano geométrico al plano de recorte
             clipPlane.Plane = sectionPlane;
 
             // Habilitar este plano de sección
             clipPlane.Enabled = true;
+            
+            // Aplicar zoom
+            if (zoomIt)
+            {
+                state.ZoomInCurViewOnCurSel();                
 
-            state.ZoomInCurViewOnCurSel();
+                //var selectedItems = Application.ActiveDocument.CurrentSelection.SelectedItems;
+                //var comSelection = ComApiBridge.ToInwOpSelection(selectedItems);
+                //state.ZoomInCurViewOnSel(comSelection);                
+            }
 
+            //Autodesk.Navisworks.Api.Interop.LcRmFrameworkInterface.ExecuteCommand(
+            //"Viewpoint.ZoomToSelectedItems", 0);
+
+            //Application.ActiveDocument.Views.ExecuteCommand("Viewpoint.ZoomToSelectedItems");
+            //state.ZoomInCurViewOnBoundingBox((InwLBox3f)bounds, 1.2);
             // Opcional: Ajustar la vista para centrarse en el elemento seleccionado
             //AdjustViewToSelection(state, bounds);
         }

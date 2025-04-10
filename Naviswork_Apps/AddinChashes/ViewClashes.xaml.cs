@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Syncfusion.Licensing;
 
 namespace Naviswork_Apps
 {
@@ -24,6 +25,8 @@ namespace Naviswork_Apps
     {
         public ViewClashes()
         {
+            SyncfusionLicenseProvider
+                .RegisterLicense("MzgxMDAwOUAzMjM5MmUzMDJlMzAzYjMyMzkzYmpuRXNpM0NwYmd0UHZPdHpDTGdJUmFuV1dBZkxveTJrVDJONFBTQlFXNVU9");
             InitializeComponent();
         }        
     }
