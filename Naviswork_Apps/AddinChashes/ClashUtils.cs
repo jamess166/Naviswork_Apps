@@ -47,7 +47,7 @@ namespace Naviswork_Apps.AddinChashes
                 {
                     case ClashResult clashResult when IsRelevantClash(clashResult):
                         clashData.Status = clashResult.Status.ToString();
-                        clashData.AssignedTo = clashResult.AssignedTo;
+                        clashData.AssignedTo = clashResult.AssignedTo?.DisplayName;
                         clashData.BoundingBoxResults3D = clashResult.BoundingBox;
                         clashData.AddModelItems(clashResult);
                         //clashData.ComputeBoundingBox();
@@ -55,7 +55,7 @@ namespace Naviswork_Apps.AddinChashes
                         break;                        
                     case ClashResultGroup groupItem:       
                         clashData.Status = groupItem.Status.ToString();
-                        clashData.AssignedTo = groupItem.AssignedTo;
+                        clashData.AssignedTo = groupItem.AssignedTo?.DisplayName;
                         clashData.BoundingBoxResults3D = groupItem.BoundingBox;
                         clashData = ProcessGroupItem(groupItem, clashData);
                         //clashData.ComputeBoundingBox();

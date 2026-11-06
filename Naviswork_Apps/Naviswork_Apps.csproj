@@ -32,46 +32,61 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AdWindows">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\AdWindows.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\AdWindows.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Api">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Api.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Api.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Automation">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Automation.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Automation.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Clash">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Clash.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Clash.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.Navisworks.ComApi">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.ComApi.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.ComApi.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.Navisworks.Controls, Version=21.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
+    <Reference Include="Autodesk.Navisworks.Controls, Version=23.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Controls.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Interop.ComApi">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Interop.ComApiAutomation">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Interop.ComApiAutomation.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Interop.ComApiAutomation.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Interop.Timeliner">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\Autodesk.Navisworks.Interop.Timeliner.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Interop.Timeliner.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Autodesk.Navisworks.Timeliner">
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\Autodesk.Navisworks.Timeliner.dll</HintPath>
+    </Reference>
     <Reference Include="navisworks.gui.roamer">
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2024\navisworks.gui.roamer.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2026\navisworks.gui.roamer.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Syncfusion.Data.WPF, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
-    <Reference Include="Syncfusion.Licensing, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
-    <Reference Include="Syncfusion.SfGrid.WPF, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
-    <Reference Include="Syncfusion.Tools.WPF, Version=29.1462.33.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Data.WPF, Version=24.1460.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\24.1.41\Assemblies\4.6\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=24.1460.41.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\24.1.41\Assemblies\4.6\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=24.1460.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\24.1.41\Assemblies\4.6\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.WPF, Version=24.1460.41.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Syncfusion\Essential Studio\WPF\24.1.41\Assemblies\4.6\Syncfusion.Tools.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -106,6 +121,11 @@
       <DependentUpon>ViewFocusId.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\NavisworkUtils.cs" />
+    <Compile Include="CreateTestClashes\CreateTestClashes.cs" />
+    <Compile Include="AddinSearchSets\SearchSets.cs" />
+    <Compile Include="AddinSearchSets\ViewSearchSets.xaml.cs">
+      <DependentUpon>ViewSearchSets.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="AddinChashes\ViewClashes.xaml">
@@ -121,6 +141,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddinSearchSets\ViewSearchSets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -128,23 +152,24 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>REM Crear la carpeta principal si no existe
-if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps"
+if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps"
 
 REM Crear la subcarpeta de idioma si no existe
-if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US"
+if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\en-US" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\en-US"
 
 REM Crear la carpeta de Resources si no existe
-if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources"
+if not exist "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\Resources" mkdir "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\Resources"
 
 REM Copiar los archivos individuales
-xcopy /Y "$(TargetDir)Naviswork_Apps.dll" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\"
-xcopy /Y "$(ProjectDir)Naviswork_Apps.xaml" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\en-US\"
+xcopy /Y "$(TargetDir)Naviswork_Apps.dll" "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\"
+xcopy /Y "$(ProjectDir)Naviswork_Apps.xaml" "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\en-US\"
 
 REM Copiar toda la carpeta Resources con su contenido
-xcopy /E /I /Y "$(ProjectDir)Resources" "C:\ProgramData\Autodesk\Navisworks Manage 2024\Plugins\Naviswork_Apps\Resources"
+xcopy /E /I /Y "$(ProjectDir)Resources" "C:\ProgramData\Autodesk\Navisworks Manage 2026\Plugins\Naviswork_Apps\Resources"
 
 REM Mostrar mensaje de éxito
 echo Post-Build Event ejecutado correctamente.

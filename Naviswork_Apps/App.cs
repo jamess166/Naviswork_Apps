@@ -1,5 +1,6 @@
 ﻿using Autodesk.Navisworks.Api.Plugins;
 using Naviswork_Apps.AddinChashes;
+using Naviswork_Apps.AddinSearchSets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace Naviswork_Apps
 {
     [Plugin("AppCesel", "fCabrera", DisplayName = "AppCesel")]
     [RibbonLayout("Naviswork_Apps.xaml")]
-    [RibbonTab("ID_CESEL_TAB", DisplayName = "CESEL")]
+    [RibbonTab("ID_CESEL_TAB", DisplayName = "FRATA")]
     [Command("ID_ButtonFocusIds", DisplayName = "Focus \n Ids", Icon = "Resources\\cesel16x16.png", LargeIcon = "Resources\\cesel32x32.png", ToolTip = "Buscar Ids")]
     [Command("ID_ButtonClashes", DisplayName = "Clashes \n Management", Icon = "Resources\\cesel16x16.png", LargeIcon = "Resources\\cesel32x32.png", ToolTip = "Gestion Clashes")]
+    [Command("ID_ButtonCreateTestClashes", DisplayName = "Create \n Test Clashes", Icon = "Resources\\cesel16x16.png", LargeIcon = "Resources\\cesel32x32.png", ToolTip = "Crear Pruebas de Clashes")]
+    [Command("ID_ButtonSearchSets", DisplayName = "Crear \n Busquedas", Icon = "Resources\\cesel16x16.png", LargeIcon = "Resources\\cesel32x32.png", ToolTip = "Crear busquedas por PR-Elemento")]
     public class App : CommandHandlerPlugin
     {
         public override int ExecuteCommand(string name, params string[] parameters)
@@ -24,6 +27,12 @@ namespace Naviswork_Apps
                     break;
                 case "ID_ButtonFocusIds":
                     new FocusIds().Execute();
+                    break;
+                case "ID_ButtonCreateTestClashes":
+                    new CreateTestClashes().Execute();
+                    break;
+                case "ID_ButtonSearchSets":
+                    new SearchSets().Execute();
                     break;
             }
             return 0;

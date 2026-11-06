@@ -5,7 +5,7 @@
     xmlns:nvw="clr-namespace:Autodesk.Navisworks.Gui.Roamer.AIRLook;assembly=navisworks.gui.roamer"
     x:Uid="UID_Naviswork_Apps_RIBBON_CONTROL">
 
-	<RibbonTab Title="CESEL" Id="ID_CESEL_TAB">
+	<RibbonTab Title="FRATA" Id="ID_CESEL_TAB">
 		<RibbonPanel x:Uid="UID_CESEL_PANEL">
 			<RibbonPanelSource x:Uid="UID_CESEL_PANEL_SOURCE" Title="Comandos">
 				<nvw:NWRibbonButton
@@ -22,7 +22,21 @@
                     Orientation="Vertical"
                     ShowText="True"
                     Size="Large"/>
-			</RibbonPanelSource>			
+				<nvw:NWRibbonButton
+	                x:Uid="UID_ButtonCreateTestClashes"
+	                Id="ID_ButtonCreateTestClashes"
+	                KeyTip="C3"
+	                Orientation="Vertical"
+	                ShowText="True"
+	                Size="Large"/>
+				<nvw:NWRibbonButton
+	                x:Uid="UID_ButtonSearchSets"
+	                Id="ID_ButtonSearchSets"
+	                KeyTip="C4"
+	                Orientation="Vertical"
+	                ShowText="True"
+	                Size="Large"/>
+			</RibbonPanelSource>
 		</RibbonPanel>
 	</RibbonTab>
 
